@@ -17,6 +17,8 @@ public class Display extends javax.swing.JFrame {
      * Creates new form Display
      */
     
+    
+    
     private static Scanner x ;
     public Display() {
         initComponents();
@@ -177,11 +179,12 @@ public class Display extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        String filepath = "C:\\Users\\Stephen\\Desktop\\New Folder\\newfile.txt" ;
+        String filepath = "C:\\Users\\Vernon Shaw\\Desktop\\newfile.txt" ;
         String searchTerm = jComboBox1.getSelectedItem().toString() ;
         
         boolean found = false ;
