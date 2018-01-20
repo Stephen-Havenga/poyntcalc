@@ -35,134 +35,367 @@ public class Display extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        coaxDataPanel = new javax.swing.JPanel();
+        dropdownBox = new javax.swing.JComboBox<>();
+        manTxt = new javax.swing.JTextField();
+        inCondRadTxt = new javax.swing.JTextField();
+        oneTimeBendRadTxt = new javax.swing.JTextField();
+        manuLbl = new javax.swing.JLabel();
+        inCondRadLbl = new javax.swing.JLabel();
+        oTBendRadLbl = new javax.swing.JLabel();
+        mmLbl3 = new javax.swing.JLabel();
+        mmLbl4 = new javax.swing.JLabel();
+        outJackRadLbl = new javax.swing.JLabel();
+        outJackRadTxt = new javax.swing.JTextField();
+        mmLbl2 = new javax.swing.JLabel();
+        modelNumLbl = new javax.swing.JLabel();
+        modNumTxt = new javax.swing.JTextField();
+        dielectricLbl = new javax.swing.JLabel();
+        dielectricTxt = new javax.swing.JTextField();
+        shieldOC1Lbl = new javax.swing.JLabel();
+        shieldOC1Txt = new javax.swing.JTextField();
+        shieldOC2Lbl = new javax.swing.JLabel();
+        shieldOC2Txt = new javax.swing.JTextField();
+        jacketToleranceLbl = new javax.swing.JLabel();
+        jackTolerTxt = new javax.swing.JTextField();
+        rptdBendRadLbl = new javax.swing.JLabel();
+        installBendRadLbl = new javax.swing.JLabel();
+        statBendRadLbl = new javax.swing.JLabel();
+        dynBendRadLbl = new javax.swing.JLabel();
+        minFreqLbl = new javax.swing.JLabel();
+        maxFreqLbl = new javax.swing.JLabel();
+        rptdBendRadTxt = new javax.swing.JTextField();
+        installBendRadTxt = new javax.swing.JTextField();
+        statBendRadTxt = new javax.swing.JTextField();
+        dynBendRadTxt = new javax.swing.JTextField();
+        minFreqTxt = new javax.swing.JTextField();
+        maxFreqTxt = new javax.swing.JTextField();
+        mmLbl5 = new javax.swing.JLabel();
+        mmLbl6 = new javax.swing.JLabel();
+        mmLbl9 = new javax.swing.JLabel();
+        mmLbl10 = new javax.swing.JLabel();
+        mmLbl7 = new javax.swing.JLabel();
+        mmLbl8 = new javax.swing.JLabel();
+        coaxCalcPanel = new javax.swing.JPanel();
+        frequencySlider = new javax.swing.JSlider();
+        exitButton = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel11.setText("jLabel11");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coax Cable Specifications", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(0, 0, 255))); // NOI18N
+        coaxDataPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coax Cable Specifications", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(0, 0, 255))); // NOI18N
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cable 1", "Cable 2", "Cable 3", "Cable 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        dropdownBox.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dropdownBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RG 174", "RG 174_U", "LMR 195_FR", "HDF 195", "LMR 200", "LMR 400", "RG 316", "RG 58", "H 155A00", "Enviroflex 316_D", "Leoni Dacar 302" }));
+        dropdownBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                dropdownBoxActionPerformed(evt);
             }
         });
 
-        jTextField1.setEditable(false);
+        manTxt.setEditable(false);
+        manTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jTextField2.setEditable(false);
+        inCondRadTxt.setEditable(false);
+        inCondRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jTextField3.setEditable(false);
+        oneTimeBendRadTxt.setEditable(false);
+        oneTimeBendRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jTextField4.setEditable(false);
+        manuLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        manuLbl.setText("Manufacturer:");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel2.setText("Manufacturer:");
+        inCondRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        inCondRadLbl.setText("Inner Conductor Radius:");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel3.setText("Outer Radius:");
+        oTBendRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        oTBendRadLbl.setText("One Time Bend Radius:");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel4.setText("Inner Radius:");
+        mmLbl3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl3.setText("mm");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel5.setText("Bend Radius:");
+        mmLbl4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl4.setText("mm");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel1.setText("mm");
+        outJackRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        outJackRadLbl.setText("Outer Jacket Radius:");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel6.setText("mm");
+        outJackRadTxt.setEditable(false);
+        outJackRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel7.setText("mm");
+        mmLbl2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl2.setText("mm");
 
-        jButton1.setText("Exit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        modelNumLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        modelNumLbl.setText("Model Number");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        modNumTxt.setEditable(false);
+        modNumTxt.setBackground(new java.awt.Color(240, 240, 240));
+        modNumTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        dielectricLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dielectricLbl.setText("Dielectric:");
+
+        dielectricTxt.setEditable(false);
+        dielectricTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        shieldOC1Lbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        shieldOC1Lbl.setText("Shield OC1:");
+
+        shieldOC1Txt.setEditable(false);
+        shieldOC1Txt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        shieldOC2Lbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        shieldOC2Lbl.setText("Shield OC2:");
+
+        shieldOC2Txt.setEditable(false);
+        shieldOC2Txt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        jacketToleranceLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jacketToleranceLbl.setText("Jacket Tolerance:");
+
+        jackTolerTxt.setEditable(false);
+        jackTolerTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        rptdBendRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        rptdBendRadLbl.setText("Repeated Bend Radius:");
+
+        installBendRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        installBendRadLbl.setText("Installation Bend Radius:");
+
+        statBendRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        statBendRadLbl.setText("Static Bend Radius:");
+
+        dynBendRadLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dynBendRadLbl.setText("Dynamic Bend Radius:");
+
+        minFreqLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        minFreqLbl.setText("Minimum Frequency:");
+
+        maxFreqLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        maxFreqLbl.setText("Maximum Frequency:");
+
+        rptdBendRadTxt.setEditable(false);
+        rptdBendRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        installBendRadTxt.setEditable(false);
+        installBendRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        statBendRadTxt.setEditable(false);
+        statBendRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        dynBendRadTxt.setEditable(false);
+        dynBendRadTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        minFreqTxt.setEditable(false);
+        minFreqTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        maxFreqTxt.setEditable(false);
+        maxFreqTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+
+        mmLbl5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl5.setText("mm");
+
+        mmLbl6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl6.setText("mm");
+
+        mmLbl9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl9.setText("mm");
+
+        mmLbl10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl10.setText("mm");
+
+        mmLbl7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl7.setText("mm");
+
+        mmLbl8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mmLbl8.setText("mm");
+
+        javax.swing.GroupLayout coaxDataPanelLayout = new javax.swing.GroupLayout(coaxDataPanel);
+        coaxDataPanel.setLayout(coaxDataPanelLayout);
+        coaxDataPanelLayout.setHorizontalGroup(
+            coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coaxDataPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
-                .addGap(15, 15, 15))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7))
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dropdownBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                                .addComponent(installBendRadLbl)
+                                .addGap(18, 18, 18)
+                                .addComponent(installBendRadTxt))
+                            .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(manuLbl)
+                                    .addComponent(outJackRadLbl)
+                                    .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(inCondRadLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(oTBendRadLbl))
+                                    .addComponent(modelNumLbl)
+                                    .addComponent(rptdBendRadLbl))
+                                .addGap(18, 18, 18)
+                                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(inCondRadTxt)
+                                    .addComponent(oneTimeBendRadTxt)
+                                    .addComponent(outJackRadTxt)
+                                    .addComponent(rptdBendRadTxt)
+                                    .addComponent(modNumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(manTxt))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mmLbl3)
+                            .addComponent(mmLbl4)
+                            .addComponent(mmLbl2)
+                            .addComponent(mmLbl5)
+                            .addComponent(mmLbl6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(statBendRadLbl)
+                            .addComponent(shieldOC2Lbl)
+                            .addComponent(shieldOC1Lbl)
+                            .addComponent(dielectricLbl)
+                            .addComponent(dynBendRadLbl)
+                            .addComponent(jacketToleranceLbl)
+                            .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(maxFreqLbl)
+                                    .addComponent(minFreqLbl))))
+                        .addGap(49, 49, 49)
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dielectricTxt)
+                            .addComponent(shieldOC1Txt)
+                            .addComponent(shieldOC2Txt)
+                            .addComponent(jackTolerTxt)
+                            .addComponent(statBendRadTxt)
+                            .addComponent(dynBendRadTxt)
+                            .addComponent(minFreqTxt)
+                            .addComponent(maxFreqTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(mmLbl9)
+                        .addComponent(mmLbl10)
+                        .addComponent(mmLbl7, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(mmLbl8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
+        coaxDataPanelLayout.setVerticalGroup(
+            coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                        .addComponent(dropdownBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modelNumLbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(modNumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dielectricTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(dielectricLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(manuLbl)
+                            .addComponent(manTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35))
+                    .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(shieldOC1Lbl)
+                            .addComponent(shieldOC1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mmLbl7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(shieldOC2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(mmLbl8))
+                            .addComponent(shieldOC2Lbl, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(outJackRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(outJackRadLbl)
+                    .addComponent(mmLbl2)
+                    .addComponent(jackTolerTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jacketToleranceLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(inCondRadLbl)
+                    .addComponent(inCondRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mmLbl3)
+                    .addComponent(statBendRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statBendRadLbl)
+                    .addComponent(mmLbl9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(oTBendRadLbl)
+                    .addComponent(oneTimeBendRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mmLbl4)
+                    .addComponent(dynBendRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dynBendRadLbl)
+                    .addComponent(mmLbl10))
+                .addGap(18, 18, 18)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rptdBendRadLbl)
+                    .addComponent(rptdBendRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minFreqTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minFreqLbl)
+                    .addComponent(mmLbl5))
+                .addGap(18, 18, 18)
+                .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(installBendRadLbl)
+                    .addComponent(installBendRadTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxFreqTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(maxFreqLbl)
+                    .addComponent(mmLbl6))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        coaxCalcPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coax Loss Calculator", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(0, 0, 204))); // NOI18N
+
+        frequencySlider.setFont(new java.awt.Font("Times New Roman", 0, 8)); // NOI18N
+        frequencySlider.setMajorTickSpacing(1000);
+        frequencySlider.setMaximum(8000);
+        frequencySlider.setMinorTickSpacing(100);
+        frequencySlider.setPaintLabels(true);
+        frequencySlider.setPaintTicks(true);
+        frequencySlider.setSnapToTicks(true);
+        frequencySlider.setToolTipText("");
+        frequencySlider.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Frequency Select", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14))); // NOI18N
+        frequencySlider.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        frequencySlider.setName(""); // NOI18N
+
+        javax.swing.GroupLayout coaxCalcPanelLayout = new javax.swing.GroupLayout(coaxCalcPanel);
+        coaxCalcPanel.setLayout(coaxCalcPanelLayout);
+        coaxCalcPanelLayout.setHorizontalGroup(
+            coaxCalcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coaxCalcPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(frequencySlider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        coaxCalcPanelLayout.setVerticalGroup(
+            coaxCalcPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coaxCalcPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(frequencySlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        exitButton.setText("Exit");
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -170,28 +403,52 @@ public class Display extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(coaxCalcPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(coaxDataPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(exitButton)
+                        .addGap(13, 13, 13)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(coaxDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(coaxCalcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(exitButton)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void dropdownBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropdownBoxActionPerformed
         // TODO add your handling code here:
-        String filepath = "C:\\Users\\Vernon Shaw\\Desktop\\newfile.txt" ;
-        String searchTerm = jComboBox1.getSelectedItem().toString() ;
+        String filepath = "C:\\Users\\Vernon Shaw\\Desktop\\AppInformation.csv" ;
+        String searchTerm = dropdownBox.getSelectedItem().toString() ;
         
         boolean found = false ;
         String cable = "" ;
+        String dielectric = "" ;
+        String shieldOC1 = "" ;
+        String shieldOC2 = "" ;
+        String jacket = "" ;
+        String jacketTolerance = "" ;
+        String oneTimeBendRad = "" ;
+        String rptdBendRad = "" ;
+        String installBendRad = "" ;
+        String statBendRad = "" ;
+        String dynBendRad = "" ;
+        String minFreq = "" ;
+        String maxFreq = "" ;
         String manufacturer = "" ;
-        String outerRadius="" ;
-        String innerRadius="" ;
+        //String outerRadius="" ;
+        String inCondRad="" ;
         String bendRadius="" ;
         
         try{
@@ -201,19 +458,41 @@ public class Display extends javax.swing.JFrame {
             while(x.hasNext() && found == false){
                 cable = x.next();
                 manufacturer = x.next() ;
-                outerRadius = x.next() ;
-                innerRadius = x.next() ;
-                bendRadius = x.next() ;
+                inCondRad = x.next() ;
+                dielectric = x.next() ;
+                shieldOC1 = x.next() ;
+                shieldOC2 = x.next() ;
+                jacket = x.next() ;
+                jacketTolerance = x.next() ;
+                oneTimeBendRad = x.next() ;
+                rptdBendRad = x.next() ;
+                installBendRad = x.next() ;
+                statBendRad = x.next() ;
+                dynBendRad = x.next() ;
+                minFreq = x.next() ;
+                maxFreq = x.next() ;
+                
                 
                 if (cable.equals(searchTerm)){
                     found = true ;
                 }
             }
             if (found){
-                jTextField1.setText(manufacturer);
-                jTextField2.setText(outerRadius);
-                jTextField3.setText(innerRadius);
-                jTextField4.setText(bendRadius);
+                modNumTxt.setText(cable) ;
+                manTxt.setText(manufacturer);
+                rptdBendRadTxt.setText(rptdBendRad) ;
+                inCondRadTxt.setText(inCondRad);
+                oneTimeBendRadTxt.setText(oneTimeBendRad);
+                outJackRadTxt.setText(jacket) ;
+                installBendRadTxt.setText(installBendRad) ;
+                dielectricTxt.setText(dielectric) ;
+                shieldOC1Txt.setText(shieldOC1) ;
+                shieldOC2Txt.setText(shieldOC2) ;
+                jackTolerTxt.setText(jacketTolerance) ;
+                statBendRadTxt.setText(statBendRad) ;
+                dynBendRadTxt.setText(dynBendRad);
+                minFreqTxt.setText(minFreq) ;
+                maxFreqTxt.setText(maxFreq) ;
                 
             }
         }
@@ -224,12 +503,12 @@ public class Display extends javax.swing.JFrame {
         //jTextField1.setText(jComboBox1.getSelectedItem().toString());
 
         
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_dropdownBoxActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_exitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,21 +546,52 @@ public class Display extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel coaxCalcPanel;
+    private javax.swing.JPanel coaxDataPanel;
+    private javax.swing.JLabel dielectricLbl;
+    private javax.swing.JTextField dielectricTxt;
+    private javax.swing.JComboBox<String> dropdownBox;
+    private javax.swing.JLabel dynBendRadLbl;
+    private javax.swing.JTextField dynBendRadTxt;
+    private javax.swing.JButton exitButton;
+    private javax.swing.JSlider frequencySlider;
+    private javax.swing.JLabel inCondRadLbl;
+    private javax.swing.JTextField inCondRadTxt;
+    private javax.swing.JLabel installBendRadLbl;
+    private javax.swing.JTextField installBendRadTxt;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jackTolerTxt;
+    private javax.swing.JLabel jacketToleranceLbl;
+    private javax.swing.JTextField manTxt;
+    private javax.swing.JLabel manuLbl;
+    private javax.swing.JLabel maxFreqLbl;
+    private javax.swing.JTextField maxFreqTxt;
+    private javax.swing.JLabel minFreqLbl;
+    private javax.swing.JTextField minFreqTxt;
+    private javax.swing.JLabel mmLbl10;
+    private javax.swing.JLabel mmLbl2;
+    private javax.swing.JLabel mmLbl3;
+    private javax.swing.JLabel mmLbl4;
+    private javax.swing.JLabel mmLbl5;
+    private javax.swing.JLabel mmLbl6;
+    private javax.swing.JLabel mmLbl7;
+    private javax.swing.JLabel mmLbl8;
+    private javax.swing.JLabel mmLbl9;
+    private javax.swing.JTextField modNumTxt;
+    private javax.swing.JLabel modelNumLbl;
+    private javax.swing.JLabel oTBendRadLbl;
+    private javax.swing.JTextField oneTimeBendRadTxt;
+    private javax.swing.JLabel outJackRadLbl;
+    private javax.swing.JTextField outJackRadTxt;
+    private javax.swing.JLabel rptdBendRadLbl;
+    private javax.swing.JTextField rptdBendRadTxt;
+    private javax.swing.JLabel shieldOC1Lbl;
+    private javax.swing.JTextField shieldOC1Txt;
+    private javax.swing.JLabel shieldOC2Lbl;
+    private javax.swing.JTextField shieldOC2Txt;
+    private javax.swing.JLabel statBendRadLbl;
+    private javax.swing.JTextField statBendRadTxt;
     // End of variables declaration//GEN-END:variables
 }
