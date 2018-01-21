@@ -68,7 +68,7 @@
               <Component id="coaxCalcPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="exitButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,48 +94,59 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="dropdownBox" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="installBendRadLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="installBendRadTxt" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="manuLbl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="outJackRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                          <Component id="inCondRadLbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="oTBendRadLbl" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="modelNumLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rptdBendRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="inCondRadTxt" max="32767" attributes="0"/>
-                                      <Component id="oneTimeBendRadTxt" max="32767" attributes="0"/>
-                                      <Component id="outJackRadTxt" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="rptdBendRadTxt" max="32767" attributes="0"/>
-                                      <Component id="modNumTxt" min="-2" pref="124" max="-2" attributes="0"/>
-                                      <Component id="manTxt" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="mmLbl3" min="-2" max="-2" attributes="0"/>
-                              <Component id="mmLbl4" min="-2" max="-2" attributes="0"/>
-                              <Component id="mmLbl2" min="-2" max="-2" attributes="0"/>
-                              <Component id="mmLbl5" min="-2" max="-2" attributes="0"/>
-                              <Component id="mmLbl6" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="dielectricLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="dielectricTxt" min="-2" pref="124" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="installBendRadLbl" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="installBendRadTxt" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="manuLbl" min="-2" max="-2" attributes="0"/>
+                                              <Component id="outJackRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                  <Component id="inCondRadLbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="oTBendRadLbl" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="rptdBendRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="inCondRadTxt" pref="124" max="32767" attributes="0"/>
+                                              <Component id="oneTimeBendRadTxt" max="32767" attributes="0"/>
+                                              <Component id="outJackRadTxt" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="rptdBendRadTxt" max="32767" attributes="0"/>
+                                              <Component id="manTxt" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="mmLbl3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mmLbl4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mmLbl2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mmLbl5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="mmLbl6" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="93" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="modelNumLbl" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="93" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="statBendRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="shieldOC2Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="shieldOC1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="dielectricLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="dynBendRadLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jacketToleranceLbl" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -145,10 +156,10 @@
                                       <Component id="minFreqLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Component id="modNumTxt" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="dielectricTxt" alignment="0" max="32767" attributes="0"/>
                               <Component id="shieldOC1Txt" alignment="0" max="32767" attributes="0"/>
                               <Component id="shieldOC2Txt" alignment="0" max="32767" attributes="0"/>
                               <Component id="jackTolerTxt" alignment="0" max="32767" attributes="0"/>
@@ -176,21 +187,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dropdownBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="dropdownBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="modelNumLbl" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="modNumTxt" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dielectricTxt" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Component id="dielectricLbl" min="-2" max="-2" attributes="0"/>
+                      <Component id="modNumTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="modelNumLbl" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -211,7 +214,11 @@
                                   <Component id="shieldOC2Txt" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="mmLbl8" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="shieldOC2Lbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="shieldOC2Lbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dielectricLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dielectricTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
@@ -269,7 +276,7 @@
               <Font name="Times New Roman" size="14" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;RG 174&quot;, &quot;RG 174_U&quot;, &quot;LMR 195_FR&quot;, &quot;HDF 195&quot;, &quot;LMR 200&quot;, &quot;LMR 400&quot;, &quot;RG 316&quot;, &quot;RG 58&quot;, &quot;H 155A00&quot;, &quot;Enviroflex 316_D&quot;, &quot;Leoni Dacar 302&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;RG_174&quot;, &quot;RG_174_U&quot;, &quot;LMR_195_FR&quot;, &quot;HDF_195&quot;, &quot;LMR_200&quot;, &quot;LMR_400&quot;, &quot;RG_316&quot;, &quot;RG_58&quot;, &quot;H_155A00&quot;, &quot;Enviroflex_316_D&quot;, &quot;Leoni_Dacar_302&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>
