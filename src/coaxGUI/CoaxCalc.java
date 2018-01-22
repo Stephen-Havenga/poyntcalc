@@ -181,7 +181,7 @@ public class CoaxCalc extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        String filepath = "C:\\Users\\Stephen\\Desktop\\New Folder\\newfile.txt" ;
+        String filepath = "newfile.txt" ;
         String searchTerm = jComboBox1.getSelectedItem().toString() ;
         
         boolean found = false ;
