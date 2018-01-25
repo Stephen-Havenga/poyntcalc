@@ -5,6 +5,7 @@
  */
 package poyntingapp;
 
+import java.text.DecimalFormat;
 /**
  *
  * @author Vernon Shaw
@@ -14,6 +15,8 @@ public class linkBudgetCalc extends javax.swing.JFrame {
     /**
      * Creates new form linkBudgetCalc
      */
+    
+    private static DecimalFormat df2 = new DecimalFormat(".##");
     public linkBudgetCalc() {
         initComponents();
         
@@ -72,10 +75,20 @@ public class linkBudgetCalc extends javax.swing.JFrame {
         mfButtonGroup.add(mButton);
         mButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         mButton.setText("Meters");
+        mButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mButtonActionPerformed(evt);
+            }
+        });
 
         mfButtonGroup.add(fButton);
         fButton.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         fButton.setText("Feet");
+        fButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fButtonActionPerformed(evt);
+            }
+        });
 
         distanceInputTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
@@ -98,7 +111,7 @@ public class linkBudgetCalc extends javax.swing.JFrame {
             linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(linkBudgetPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(freeSpaceLossLbl)
                     .addGroup(linkBudgetPanelLayout.createSequentialGroup()
                         .addComponent(unitsSelectLbl)
@@ -117,8 +130,8 @@ public class linkBudgetCalc extends javax.swing.JFrame {
                             .addComponent(freeSpaceLossResultLbl)
                             .addComponent(distanceInputLbl))
                         .addGap(18, 18, 18)
-                        .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(distanceInputTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(freeSpaceLossResultTxt))))
                 .addContainerGap(206, Short.MAX_VALUE))
         );
@@ -134,13 +147,13 @@ public class linkBudgetCalc extends javax.swing.JFrame {
                     .addComponent(MHzLbl))
                 .addGap(18, 18, 18)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(distanceInputLbl)
+                    .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(unitsSelectLbl)
                     .addComponent(mButton)
                     .addComponent(fButton))
-                .addGap(18, 18, 18)
-                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(distanceInputLbl)
-                    .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(freeSpaceLossResultLbl)
@@ -167,6 +180,24 @@ public class linkBudgetCalc extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
+        // TODO add your handling code here:
+        double mF = Double.parseDouble(freqInputTxt.getText());
+        double mM = Double.parseDouble(distanceInputTxt.getText());
+        double LFS = -27.55 + 20*(Math.log(mF)) + 20*(Math.log(mM)) ;
+        freeSpaceLossResultTxt.setText(String.valueOf(LFS));
+        
+    }//GEN-LAST:event_mButtonActionPerformed
+
+    private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
+        // TODO add your handling code here:
+        double fF = Double.parseDouble(freqInputTxt.getText());
+        double fM = (Double.parseDouble(distanceInputTxt.getText())) * (0.30483);
+        double LFS = -27.55 + 20*(Math.log(fF)) + 20*(Math.log(fM)) ;
+        String sLFS = String.valueOf(LFS);
+        freeSpaceLossResultTxt.setText(sLFS);
+    }//GEN-LAST:event_fButtonActionPerformed
 
     /**
      * @param args the command line arguments

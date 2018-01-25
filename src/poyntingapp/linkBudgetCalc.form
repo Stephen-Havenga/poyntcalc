@@ -73,7 +73,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="freeSpaceLossLbl" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="unitsSelectLbl" min="-2" max="-2" attributes="0"/>
@@ -95,8 +95,8 @@
                               <Component id="distanceInputLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="distanceInputTxt" pref="50" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="distanceInputTxt" min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="freeSpaceLossResultTxt" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -118,16 +118,16 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="unitsSelectLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="mButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="fButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="distanceInputLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="distanceInputTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="unitsSelectLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="mButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="fButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="freeSpaceLossResultLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="freeSpaceLossResultTxt" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -172,6 +172,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Meters"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mButtonActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="linkBudgetCalc_mButton"/>
           </AuxValues>
@@ -186,6 +189,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Feet"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="distanceInputTxt">
           <Properties>
