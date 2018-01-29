@@ -3,9 +3,13 @@ package poyntingapp;
 import java.awt.Component;
 import coaxGUI.coaxCalc;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -27,6 +31,30 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        
+        String filepath = "AppInformation.csv";
+        
+        File arrayfile = new File(filepath);
+        
+        ArrayList<String> dataArray = new ArrayList<String>();
+        Scanner inputStream;
+        
+        try {
+            inputStream = new Scanner(arrayfile);
+            inputStream.useDelimiter("\n");
+            int counter = -1;
+            while(inputStream.hasNext()){
+                String s = inputStream.nextLine();
+                if(counter>0){    
+                    dataArray.add((counter-1),s);
+                   //System.out.print(counter-1);
+                    //System.out.println(s);
+                }
+                counter++;
+            }
+        } catch (Exception e) {
+          }
+        
     }
 
     /**
