@@ -614,16 +614,15 @@ public class coaxCalc extends javax.swing.JFrame {
         // TODO add your handling code here:
        double freq = frequencySlider.getValue() ;
         String rowNumber = jTextField1.getText() ;
-        double rowNum =0.0 ;
+        int rowNum = 0;
      if(rowNumber == null || rowNumber.isEmpty())
      {
-         rowNum = 0.0;
+         rowNum = 0;
      }
      else{
-              rowNum = Double.parseDouble(rowNumber);
+              rowNum = Integer.parseInt(rowNumber);
            }
      
-       //int rowNum =0 ;
        //rowNum = Integer.parseInt(jTextField1.getText().trim()) ;
        double columnNum = 0.0 ;
        
@@ -635,7 +634,7 @@ public class coaxCalc extends javax.swing.JFrame {
            columnNum = (int) ((freq/100)+1) ;
        }
     }//GEN-LAST:event_frequencySliderStateChanged
-        
+       
     private void cableSelectedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cableSelectedTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cableSelectedTxtActionPerformed
