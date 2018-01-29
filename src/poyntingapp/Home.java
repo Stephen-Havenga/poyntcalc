@@ -1,5 +1,6 @@
 package poyntingapp;
 
+import java.awt.Component;
 import coaxGUI.coaxCalc;
 import java.awt.Toolkit;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -210,6 +212,8 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+        Component frame = null;
+        JOptionPane.showMessageDialog(frame, "about text...","About",JOptionPane.OK_OPTION);
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
