@@ -17,13 +17,14 @@ public class coaxCalc extends javax.swing.JFrame {
      * Creates new form coaxCalc
      */
     
-    String cableName ;
+    
     
     
     
     private static Scanner x ;
     public coaxCalc() {
         initComponents();
+        String cableName ;
     }
 
     /**
@@ -79,6 +80,7 @@ public class coaxCalc extends javax.swing.JFrame {
         mmLbl10 = new javax.swing.JLabel();
         mmLbl7 = new javax.swing.JLabel();
         mmLbl8 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         coaxCalcPanel = new javax.swing.JPanel();
         frequencySlider = new javax.swing.JSlider();
         exitButton = new javax.swing.JButton();
@@ -223,6 +225,15 @@ public class coaxCalc extends javax.swing.JFrame {
         mmLbl8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         mmLbl8.setText("mm");
 
+        jTextField1.setEditable(false);
+        jTextField1.setForeground(new java.awt.Color(240, 240, 240));
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout coaxDataPanelLayout = new javax.swing.GroupLayout(coaxDataPanel);
         coaxDataPanel.setLayout(coaxDataPanelLayout);
         coaxDataPanelLayout.setHorizontalGroup(
@@ -299,6 +310,10 @@ public class coaxCalc extends javax.swing.JFrame {
                         .addComponent(mmLbl7, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(mmLbl8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
+            .addGroup(coaxDataPanelLayout.createSequentialGroup()
+                .addGap(342, 342, 342)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         coaxDataPanelLayout.setVerticalGroup(
             coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,7 +331,7 @@ public class coaxCalc extends javax.swing.JFrame {
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(coaxDataPanelLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(manuLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(manuLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
                             .addComponent(manTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35))
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
@@ -345,7 +360,7 @@ public class coaxCalc extends javax.swing.JFrame {
                             .addComponent(outJackRadTxt)))
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(mmLbl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(mmLbl2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -359,7 +374,7 @@ public class coaxCalc extends javax.swing.JFrame {
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inCondRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(inCondRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                             .addComponent(mmLbl3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(statBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(mmLbl9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -371,7 +386,7 @@ public class coaxCalc extends javax.swing.JFrame {
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(oTBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(oTBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                             .addComponent(mmLbl4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(dynBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(mmLbl10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -383,7 +398,7 @@ public class coaxCalc extends javax.swing.JFrame {
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rptdBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(rptdBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                             .addComponent(minFreqLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(mmLbl5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18)
@@ -394,10 +409,11 @@ public class coaxCalc extends javax.swing.JFrame {
                     .addGroup(coaxDataPanelLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(coaxDataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(installBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(installBendRadLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                             .addComponent(maxFreqLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(mmLbl6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(94, 94, 94))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         coaxCalcPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Coax Loss Calculator", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(0, 0, 204))); // NOI18N
@@ -473,20 +489,20 @@ public class coaxCalc extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(coaxCalcPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(coaxDataPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(frequencySelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(cableSelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lengthInputLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(inputLengthTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80)
-                        .addComponent(exitButton)
-                        .addGap(13, 13, 13)))
+                    .addComponent(coaxDataPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(frequencySelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cableSelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(lengthInputLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(inputLengthTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exitButton)
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,15 +510,14 @@ public class coaxCalc extends javax.swing.JFrame {
                 .addComponent(coaxDataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(coaxCalcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(exitButton)
-                        .addComponent(frequencySelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cableSelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(inputLengthTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lengthInputLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(frequencySelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cableSelectedTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lengthInputLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(inputLengthTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitButton))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         pack();
@@ -516,7 +531,6 @@ public class coaxCalc extends javax.swing.JFrame {
         
         boolean found = false ;
         String cable = "" ;
-        cableName = cable ;
         String dielectric = "" ;
         String shieldOC1 = "" ;
         String shieldOC2 = "" ;
@@ -533,6 +547,7 @@ public class coaxCalc extends javax.swing.JFrame {
         //String outerRadius="" ;
         String inCondRad="" ;
         String bendRadius="" ;
+        int counter = 0 ;
         
         try{
             x = new Scanner(new FileReader(filepath)) ;
@@ -554,6 +569,7 @@ public class coaxCalc extends javax.swing.JFrame {
                 dynBendRad = x.next() ;
                 minFreq = x.next() ;
                 maxFreq = x.next() ;
+                counter++ ;
                 
                 
                 if (cable.equals(searchTerm)){
@@ -576,6 +592,7 @@ public class coaxCalc extends javax.swing.JFrame {
                 dynBendRadTxt.setText(dynBendRad);
                 minFreqTxt.setText(minFreq) ;
                 maxFreqTxt.setText(maxFreq) ;
+               jTextField1.setText(Integer.toString(counter)) ;
                 
             }
         }
@@ -596,730 +613,29 @@ public class coaxCalc extends javax.swing.JFrame {
     private void frequencySliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_frequencySliderStateChanged
         // TODO add your handling code here:
        double freq = frequencySlider.getValue() ;
-       frequencyResults(freq) ;
+        String rowNumber = jTextField1.getText() ;
+        double rowNum =0.0 ;
+     if(rowNumber == null || rowNumber.isEmpty())
+     {
+         rowNum = 0.0;
+     }
+     else{
+              rowNum = Double.parseDouble(rowNumber);
+           }
+     
+       //int rowNum =0 ;
+       //rowNum = Integer.parseInt(jTextField1.getText().trim()) ;
+       double columnNum = 0.0 ;
        
+       if (freq == 0){
+           columnNum = 0 ;
+       }if (freq==50){
+           columnNum = 1;
+       }if (freq>=100 && freq<=8000){
+           columnNum = (int) ((freq/100)+1) ;
+       }
     }//GEN-LAST:event_frequencySliderStateChanged
-
-    private void frequencyResults(Double sliderValue) {
-        String CableName = modNumTxt.getText() ;
-        cableSelectedTxt.setText(CableName) ;
         
-                // TODO add your handling code here:
-        String filepath = "C:\\Users\\Vernon Shaw\\Desktop\\AppInformation.txt" ;
-        String searchTerm = dropdownBox.getSelectedItem().toString() ;
-        
-        boolean found = false ;
-        String cable = "" ;
-        String dielectric = "" ;
-        String shieldOC1 = "" ;
-        String shieldOC2 = "" ;
-        String jacket = "" ;
-        String jacketTolerance = "" ;
-        String oneTimeBendRad = "" ;
-        String rptdBendRad = "" ;
-        String installBendRad = "" ;
-        String statBendRad = "" ;
-        String dynBendRad = "" ;
-        String minFreq = "" ;
-        String maxFreq = "" ;
-        String manufacturer = "" ;
-        //String outerRadius="" ;
-        String inCondRad="" ;
-        String bendRadius="" ;
-        String fiftyHz = "" ;
-        String hundredHz = "" ;
-        String twoHundredHz = "" ;
-        String threeHundredHz = "" ;
-        String fourHundredHz = "" ;
-        String fiveHundredHz = "" ;
-        String sixHundredHz = "" ;
-        String sevenHundredHz = "" ;
-        String eightHundredHz = "" ;
-        String nineHundredHz = "" ;
-        String oneThousandHz = "" ;
-        String twoThousandHz = "" ;
-        String threeThousandHz = "" ;
-        String fourThousandHz = "" ;
-        String fiveThousandHz = "" ;
-        String sixThousandHz = "" ;
-        String sevenThousandHz = "" ;
-        String eightThousandHz = "" ;
-        String oneThousandOneHundredHz = "" ;
-        String oneThousandTwoHundredHz = "" ;
-        String oneThousandThreeHundredHz = "" ;
-        String oneThousandFourHundredHz = "" ;
-        String oneThousandFiveHundredHz = "" ;
-        String oneThousandSixHundredHz = "" ;
-        String oneThousandSevenHundredHz = "" ;
-        String oneThousandEightHundredHz = "" ;
-        String oneThousandNineHundredHz = "" ;
-        String twoThousandOneHundredHz = "" ;
-        String twoThousandTwoHundredHz = "" ;
-        String twoThousandThreeHundredHz = "" ;
-        String twoThousandFourHundredHz = "" ;
-        String twoThousandFiveHundredHz = "" ;
-        String twoThousandSixHundredHz = "" ;
-        String twoThousandSevenHundredHz = "" ;
-        String twoThousandEightHundredHz = "" ;
-        String twoThousandNineHundredHz = "" ;
-        String threeThousandOneHundredHz = "" ;
-        String threeThousandTwoHundredHz = "" ;
-        String threeThousandThreeHundredHz = "" ;
-        String threeThousandFourHundredHz = "" ;
-        String threeThousandFiveHundredHz = "" ;
-        String threeThousandSixHundredHz = "" ;
-        String threeThousandSevenHundredHz = "" ;
-        String threeThousandEightHundredHz = "" ;
-        String threeThousandNineHundredHz = "" ;
-        String fourThousandOneHundredHz = "" ;
-        String fourThousandTwoHundredHz = "" ;
-        String fourThousandThreeHundredHz = "" ;
-        String fourThousandFourHundredHz = "" ;
-        String fourThousandFiveHundredHz = "" ;
-        String fourThousandSixHundredHz = "" ;
-        String fourThousandSevenHundredHz = "" ;
-        String fourThousandEightHundredHz = "" ;
-        String fourThousandNineHundredHz = "" ;
-        String fiveThousandOneHundredHz = "" ;
-        String fiveThousandTwoHundredHz = "" ;
-        String fiveThousandThreeHundredHz = "" ;
-        String fiveThousandFourHundredHz = "" ;
-        String fiveThousandFiveHundredHz = "" ;
-        String fiveThousandSixHundredHz = "" ;
-        String fiveThousandSevenHundredHz = "" ;
-        String fiveThousandEightHundredHz = "" ;
-        String fiveThousandNineHundredHz = "" ;
-        String sixThousandOneHundredHz = "" ;
-        String sixThousandTwoHundredHz = "" ;
-        String sixThousandThreeHundredHz = "" ;
-        String sixThousandFourHundredHz = "" ;
-        String sixThousandFiveHundredHz = "" ;
-        String sixThousandSixHundredHz = "" ;
-        String sixThousandSevenHundredHz = "" ;
-        String sixThousandEightHundredHz = "" ;
-        String sixThousandNineHundredHz = "" ;
-        String sevenThousandOneHundredHz = "" ;
-        String sevenThousandTwoHundredHz = "" ;
-        String sevenThousandThreeHundredHz = "" ;
-        String sevenThousandFourHundredHz = "" ;
-        String sevenThousandFiveHundredHz = "" ;
-        String sevenThousandSixHundredHz = "" ;
-        String sevenThousandSevenHundredHz = "" ;
-        String sevenThousandEightHundredHz = "" ;
-        String sevenThousandNineHundredHz = "" ;
-        
-        
-        try{
-            x = new Scanner(new FileReader(filepath)) ;
-            x.useDelimiter("[,\n]") ;
-            
-            while(x.hasNext() && found == false){
-                cable = x.next();
-                manufacturer = x.next() ;
-                inCondRad = x.next() ;
-                dielectric = x.next() ;
-                shieldOC1 = x.next() ;
-                shieldOC2 = x.next() ;
-                jacket = x.next() ;
-                jacketTolerance = x.next() ;
-                oneTimeBendRad = x.next() ;
-                rptdBendRad = x.next() ;
-                installBendRad = x.next() ;
-                statBendRad = x.next() ;
-                dynBendRad = x.next() ;
-                minFreq = x.next() ;
-                maxFreq = x.next() ;
-                fiftyHz = x.next() ;
-                hundredHz = x.next() ;
-                twoHundredHz = x.next() ;
-                threeHundredHz = x.next() ;
-                fourHundredHz = x.next() ;
-                fiveHundredHz = x.next() ;
-                sixHundredHz = x.next() ;
-                sevenHundredHz = x.next() ;
-                eightHundredHz = x.next() ;
-                nineHundredHz = x.next() ;
-                oneThousandHz = x.next() ;
-                oneThousandOneHundredHz = x.next() ;
-                oneThousandTwoHundredHz = x.next() ;
-                oneThousandThreeHundredHz = x.next() ;
-                oneThousandFourHundredHz = x.next() ;
-                oneThousandFiveHundredHz = x.next() ;
-                oneThousandSixHundredHz = x.next() ;
-                oneThousandSevenHundredHz = x.next() ;
-                oneThousandEightHundredHz = x.next() ;
-                oneThousandNineHundredHz = x.next() ;
-                twoThousandHz = x.next() ;
-                twoThousandOneHundredHz = x.next() ;
-                twoThousandTwoHundredHz = x.next() ;
-                twoThousandThreeHundredHz = x.next() ;
-                twoThousandFourHundredHz = x.next() ;
-                twoThousandFiveHundredHz = x.next() ;
-                twoThousandSixHundredHz = x.next() ;
-                twoThousandSevenHundredHz = x.next() ;
-                twoThousandEightHundredHz = x.next() ;
-                twoThousandNineHundredHz = x.next() ;
-                threeThousandHz = x.next() ;
-                threeThousandOneHundredHz = x.next() ;
-                threeThousandTwoHundredHz = x.next() ;
-                threeThousandThreeHundredHz = x.next() ;
-                threeThousandFourHundredHz = x.next() ;
-                threeThousandFiveHundredHz = x.next() ;
-                threeThousandSixHundredHz = x.next() ;
-                threeThousandSevenHundredHz = x.next() ;
-                threeThousandEightHundredHz = x.next() ;
-                threeThousandNineHundredHz = x.next() ;
-                fourThousandHz = x.next() ;
-                fourThousandOneHundredHz = x.next() ;
-                fourThousandTwoHundredHz = x.next() ;
-                fourThousandThreeHundredHz = x.next() ;
-                fourThousandFourHundredHz = x.next() ;
-                fourThousandFiveHundredHz = x.next() ;
-                fourThousandSixHundredHz = x.next() ;
-                fourThousandSevenHundredHz = x.next() ;
-                fourThousandEightHundredHz = x.next() ;
-                fourThousandNineHundredHz = x.next() ;
-                fiveThousandHz = x.next() ;
-                fiveThousandOneHundredHz = x.next() ;
-                fiveThousandTwoHundredHz = x.next() ;
-                fiveThousandThreeHundredHz = x.next() ;
-                fiveThousandFourHundredHz = x.next() ;
-                fiveThousandFiveHundredHz = x.next() ;
-                fiveThousandSixHundredHz = x.next() ;
-                fiveThousandSevenHundredHz = x.next() ;
-                fiveThousandEightHundredHz = x.next() ;
-                fiveThousandNineHundredHz = x.next() ;
-                sixThousandHz = x.next() ;
-                sixThousandOneHundredHz = x.next() ;
-                sixThousandTwoHundredHz = x.next() ;
-                sixThousandThreeHundredHz = x.next() ;
-                sixThousandFourHundredHz = x.next() ;
-                sixThousandFiveHundredHz = x.next() ;
-                sixThousandSixHundredHz = x.next() ;
-                sixThousandSevenHundredHz = x.next() ;
-                sixThousandEightHundredHz = x.next() ;
-                sixThousandNineHundredHz = x.next() ;
-                sevenThousandHz = x.next() ;
-                sevenThousandOneHundredHz = x.next() ;
-                sevenThousandTwoHundredHz = x.next() ;
-                sevenThousandThreeHundredHz = x.next() ;
-                sevenThousandFourHundredHz = x.next() ;
-                sevenThousandFiveHundredHz = x.next() ;
-                sevenThousandSixHundredHz = x.next() ;
-                sevenThousandSevenHundredHz = x.next() ;
-                sevenThousandEightHundredHz = x.next() ;
-                sevenThousandNineHundredHz = x.next() ;
-                eightThousandHz = x.next() ;
-                
-                
-                if (cable.equals(CableName)){
-                    found = true ;
-                }
-            }
-            if (found){
-        Double fifty = Double.parseDouble(fiftyHz) ;
-        Double hundred = Double.parseDouble(hundredHz)  ;
-        Double twoHundred = Double.parseDouble(twoHundredHz)  ;
-        Double threeHundred = Double.parseDouble(threeHundredHz)  ;
-        Double fourHundred = Double.parseDouble(fourHundredHz)  ;
-        Double fiveHundred = Double.parseDouble(fiveHundredHz)  ;
-        Double sixHundred = Double.parseDouble(sixHundredHz)  ;
-        Double sevenHundred = Double.parseDouble(sevenHundredHz)  ;
-        Double eightHundred = Double.parseDouble(eightHundredHz) ;
-        Double nineHundred = Double.parseDouble(nineHundredHz) ;
-        Double oneThousand = Double.parseDouble(oneThousandHz) ;
-        Double twoThousand = Double.parseDouble(twoThousandHz) ;
-        Double threeThousand = Double.parseDouble(threeThousandHz) ;
-        Double fourThousand = Double.parseDouble(fourThousandHz) ;
-        Double fiveThousand = Double.parseDouble(fiveThousandHz) ;
-        Double sixThousand = Double.parseDouble(sixThousandHz) ;
-        Double sevenThousand = Double.parseDouble(sevenThousandHz) ;
-        Double eightThousand = Double.parseDouble(eightThousandHz) ;
-        Double oneThousandOneHundred = Double.parseDouble(oneThousandOneHundredHz) ;
-        Double oneThousandTwoHundred = Double.parseDouble(oneThousandTwoHundredHz) ;
-        Double oneThousandThreeHundred = Double.parseDouble(oneThousandThreeHundredHz) ;
-        Double oneThousandFourHundred = Double.parseDouble(oneThousandFourHundredHz) ;
-        Double oneThousandFiveHundred = Double.parseDouble(oneThousandFiveHundredHz) ;
-        Double oneThousandSixHundred = Double.parseDouble(oneThousandSixHundredHz) ;
-        Double oneThousandSevenHundred = Double.parseDouble(oneThousandSevenHundredHz) ;
-        Double oneThousandEightHundred = Double.parseDouble(oneThousandEightHundredHz) ;
-        Double oneThousandNineHundred = Double.parseDouble(oneThousandNineHundredHz) ;
-        Double twoThousandOneHundred = Double.parseDouble(twoThousandOneHundredHz) ;
-        Double twoThousandTwoHundred = Double.parseDouble(twoThousandTwoHundredHz) ;
-        Double twoThousandThreeHundred = Double.parseDouble(twoThousandThreeHundredHz) ;
-        Double twoThousandFourHundred = Double.parseDouble(twoThousandFourHundredHz) ;
-        Double twoThousandFiveHundred = Double.parseDouble(twoThousandFiveHundredHz) ;
-        Double twoThousandSixHundred = Double.parseDouble(twoThousandSixHundredHz) ;
-        Double twoThousandSevenHundred = Double.parseDouble(twoThousandSevenHundredHz) ;
-        Double twoThousandEightHundred = Double.parseDouble(twoThousandEightHundredHz) ;
-        Double twoThousandNineHundred = Double.parseDouble(twoThousandNineHundredHz) ;
-        Double threeThousandOneHundred = Double.parseDouble(threeThousandOneHundredHz) ;
-        Double threeThousandTwoHundred = Double.parseDouble(threeThousandTwoHundredHz) ;
-        Double threeThousandThreeHundred = Double.parseDouble(threeThousandThreeHundredHz) ;
-        Double threeThousandFourHundred = Double.parseDouble(threeThousandFourHundredHz) ;
-        Double threeThousandFiveHundred = Double.parseDouble(threeThousandFiveHundredHz) ;
-        Double threeThousandSixHundred = Double.parseDouble(threeThousandSixHundredHz) ;
-        Double threeThousandSevenHundred = Double.parseDouble(threeThousandSevenHundredHz) ;
-        Double threeThousandEightHundred = Double.parseDouble(threeThousandEightHundredHz) ;
-        Double threeThousandNineHundred = Double.parseDouble(threeThousandNineHundredHz) ;
-        Double fourThousandOneHundred = Double.parseDouble(fourThousandOneHundredHz) ;
-        Double fourThousandTwoHundred = Double.parseDouble(fourThousandTwoHundredHz) ;
-        Double fourThousandThreeHundred = Double.parseDouble(fourThousandThreeHundredHz) ;
-        Double fourThousandFourHundred = Double.parseDouble(fourThousandFourHundredHz) ;
-        Double fourThousandFiveHundred = Double.parseDouble(fourThousandFiveHundredHz) ;
-        Double fourThousandSixHundred = Double.parseDouble(fourThousandSixHundredHz) ;
-        Double fourThousandSevenHundred = Double.parseDouble(fourThousandSevenHundredHz) ;
-        Double fourThousandEightHundred = Double.parseDouble(fourThousandEightHundredHz) ;
-        Double fourThousandNineHundred = Double.parseDouble(fourThousandNineHundredHz) ;
-        Double fiveThousandOneHundred = Double.parseDouble(fiveThousandOneHundredHz) ;
-        Double fiveThousandTwoHundred = Double.parseDouble(fiveThousandTwoHundredHz) ;
-        Double fiveThousandThreeHundred = Double.parseDouble(fiveThousandThreeHundredHz) ;
-        Double fiveThousandFourHundred = Double.parseDouble(fiveThousandFourHundredHz) ;
-        Double fiveThousandFiveHundred = Double.parseDouble(fiveThousandFiveHundredHz) ;
-        Double fiveThousandSixHundred = Double.parseDouble(fiveThousandSixHundredHz) ;
-        Double fiveThousandSevenHundred = Double.parseDouble(fiveThousandSevenHundredHz) ;
-        Double fiveThousandEightHundred = Double.parseDouble(fiveThousandEightHundredHz) ;
-        Double fiveThousandNineHundred = Double.parseDouble(fiveThousandNineHundredHz) ;
-        Double sixThousandOneHundred = Double.parseDouble(sixThousandOneHundredHz) ;
-        Double sixThousandTwoHundred = Double.parseDouble(sixThousandTwoHundredHz) ;
-        Double sixThousandThreeHundred = Double.parseDouble(sixThousandThreeHundredHz) ;
-        Double sixThousandFourHundred = Double.parseDouble(sixThousandFourHundredHz) ;
-        Double sixThousandFiveHundred = Double.parseDouble(sixThousandFiveHundredHz) ;
-        Double sixThousandSixHundred = Double.parseDouble(sixThousandSixHundredHz) ;
-        Double sixThousandSevenHundred = Double.parseDouble(sixThousandSevenHundredHz) ;
-        Double sixThousandEightHundred = Double.parseDouble(sixThousandEightHundredHz) ;
-        Double sixThousandNineHundred = Double.parseDouble(sixThousandNineHundredHz) ;
-        Double sevenThousandOneHundred = Double.parseDouble(sevenThousandOneHundredHz) ;
-        Double sevenThousandTwoHundred = Double.parseDouble(sevenThousandTwoHundredHz) ;
-        Double sevenThousandThreeHundred = Double.parseDouble(sevenThousandThreeHundredHz) ;
-        Double sevenThousandFourHundred = Double.parseDouble(sevenThousandFourHundredHz) ;
-        Double sevenThousandFiveHundred = Double.parseDouble(sevenThousandFiveHundredHz) ;
-        Double sevenThousandSixHundred = Double.parseDouble(sevenThousandSixHundredHz) ;
-        Double sevenThousandSevenHundred = Double.parseDouble(sevenThousandSevenHundredHz) ;
-        Double sevenThousandEightHundred = Double.parseDouble(sevenThousandEightHundredHz) ;
-        Double sevenThousandNineHundred = Double.parseDouble(sevenThousandNineHundredHz) ;
-               
-        
-        double intercept = 0 ;
-        double gradient = 0 ;
-        double lossPerMeter = 0 ;
-        double totalLoss =0 ;
-        double distanceGiven = Double.parseDouble(inputLengthTxt.getText()) ;//parse to double. in line above gwet string from distance input);
-        
-        if (sliderValue>=0 && sliderValue <= 50){
-            gradient = (fifty+0)/(0+50) ;
-            intercept = fifty-(gradient*50) ;
-            lossPerMeter = gradient*50+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>50 && sliderValue<=100){
-            gradient = (fifty+hundred)/(100+50) ;
-            intercept = hundred-(gradient*100) ;
-            lossPerMeter = gradient*100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>100 && sliderValue<=200){
-            gradient = (hundred+twoHundred)/(100+200) ;
-            intercept = twoHundred-(gradient*200) ;
-            lossPerMeter = gradient*200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>200 && sliderValue<=300){
-            gradient = (twoHundred+threeHundred)/(200+300) ;
-            intercept = threeHundred-(gradient*300) ;
-            lossPerMeter = gradient*300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>300 && sliderValue<=400){
-            gradient = (threeHundred+fourHundred)/(300+400) ;
-            intercept = fourHundred-(gradient*400) ;
-            lossPerMeter = gradient*400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>400 && sliderValue<=500){
-            gradient = (fourHundred+fiveHundred)/(400+500) ;
-            intercept = fiveHundred-(gradient*500) ;
-            lossPerMeter = gradient*500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>500 && sliderValue<=600){
-            gradient = (fiveHundred+sixHundred)/(500+600) ;
-            intercept = sixHundred-(gradient*600) ;
-            lossPerMeter = gradient*600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>600 && sliderValue<=700){
-            gradient = (sixHundred+sevenHundred)/(600+700) ;
-            intercept = sevenHundred-(gradient*700) ;
-            lossPerMeter = gradient*700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>700 && sliderValue<=800){
-            gradient = (sevenHundred+eightHundred)/(700+800) ;
-            intercept = eightHundred-(gradient*800) ;
-            lossPerMeter = gradient*800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>800 && sliderValue<=900){
-            gradient = (eightHundred+nineHundred)/(800+900) ;
-            intercept = nineHundred-(gradient*900) ;
-            lossPerMeter = gradient*900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>900 && sliderValue<=1000){
-            gradient = (nineHundred+oneThousand)/(900+1000) ;
-            intercept = oneThousand-(gradient*1000) ;
-            lossPerMeter = gradient*1000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1000 && sliderValue<=1100){
-            gradient = (oneThousand+oneThousandOneHundred)/(1000+1100) ;
-            intercept = oneThousandOneHundred-(gradient*1100) ;
-            lossPerMeter = gradient*1100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1100 && sliderValue<=1200){
-            gradient = (oneThousandOneHundred+oneThousandTwoHundred)/(1100+1200) ;
-            intercept = oneThousandTwoHundred-(gradient*1200) ;
-            lossPerMeter = gradient*1200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1200 && sliderValue<=1300){
-            gradient = (oneThousandTwoHundred+oneThousandThreeHundred)/(1200+1300) ;
-            intercept = oneThousandThreeHundred-(gradient*1300) ;
-            lossPerMeter = gradient*1300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1300 && sliderValue<=1400){
-            gradient = (oneThousandThreeHundred+oneThousandFourHundred)/(1300+1400) ;
-            intercept = oneThousandFourHundred-(gradient*1400) ;
-            lossPerMeter = gradient*1400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1400 && sliderValue<=1500){
-            gradient = (oneThousandFourHundred+oneThousandFiveHundred)/(1400+1500) ;
-            intercept = oneThousandFiveHundred-(gradient*1500) ;
-            lossPerMeter = gradient*1500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1500 && sliderValue<=1600){
-            gradient = (oneThousandFiveHundred+oneThousandSixHundred)/(1500+1600) ;
-            intercept = oneThousandSixHundred-(gradient*1600) ;
-            lossPerMeter = gradient*1600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1600 && sliderValue<=1700){
-            gradient = (oneThousandSixHundred+oneThousandSevenHundred)/(1600+1700) ;
-            intercept = oneThousandSevenHundred-(gradient*1700) ;
-            lossPerMeter = gradient*1700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1700 && sliderValue<=1800){
-            gradient = (oneThousandSevenHundred+oneThousandEightHundred)/(1700+1800) ;
-            intercept = oneThousandEightHundred-(gradient*1800) ;
-            lossPerMeter = gradient*1800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1800 && sliderValue<=1900){
-            gradient = (oneThousandEightHundred+oneThousandNineHundred)/(1800+1900) ;
-            intercept = oneThousandNineHundred-(gradient*1900) ;
-            lossPerMeter = gradient*1900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>1900 && sliderValue<=2000){
-            gradient = (oneThousandNineHundred+twoThousand)/(1900+2000) ;
-            intercept = twoThousand-(gradient*2000) ;
-            lossPerMeter = gradient*2000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2000 && sliderValue<=2100){
-            gradient = (twoThousand+twoThousandOneHundred)/(2000+2100) ;
-            intercept = twoThousandOneHundred-(gradient*2100) ;
-            lossPerMeter = gradient*2100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2100 && sliderValue<=2200){
-            gradient = (twoThousandOneHundred+twoThousandTwoHundred)/(2100+2200) ;
-            intercept = twoThousandTwoHundred-(gradient*2200) ;
-            lossPerMeter = gradient*2200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2200 && sliderValue<=2300){
-            gradient = (twoThousandTwoHundred+twoThousandThreeHundred)/(2200+2300) ;
-            intercept = twoThousandThreeHundred-(gradient*2300) ;
-            lossPerMeter = gradient*2300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2300 && sliderValue<=2400){
-            gradient = (twoThousandThreeHundred+twoThousandFourHundred)/(2300+2400) ;
-            intercept = twoThousandFourHundred-(gradient*2400) ;
-            lossPerMeter = gradient*2400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2400 && sliderValue<=2500){
-            gradient = (twoThousandFourHundred+twoThousandFiveHundred)/(2400+2500) ;
-            intercept = twoThousandFiveHundred-(gradient*2500) ;
-            lossPerMeter = gradient*2500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2500 && sliderValue<=2600){
-            gradient = (twoThousandFiveHundred+twoThousandSixHundred)/(2500+2600) ;
-            intercept = twoThousandSixHundred-(gradient*2600) ;
-            lossPerMeter = gradient*2600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2600 && sliderValue<=2700){
-            gradient = (twoThousandSixHundred+twoThousandSevenHundred)/(2600+2700) ;
-            intercept = twoThousandSevenHundred-(gradient*2700) ;
-            lossPerMeter = gradient*2700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2700 && sliderValue<=2800){
-            gradient = (twoThousandSevenHundred+twoThousandEightHundred)/(2700+2800) ;
-            intercept = twoThousandEightHundred-(gradient*2800) ;
-            lossPerMeter = gradient*2800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2800 && sliderValue<=2900){
-            gradient = (twoThousandEightHundred+twoThousandNineHundred)/(2800+2900) ;
-            intercept = twoThousandNineHundred-(gradient*2900) ;
-            lossPerMeter = gradient*2900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>2900 && sliderValue<=3000){
-            gradient = (twoThousandNineHundred+threeThousand)/(2900+3000) ;
-            intercept = threeThousand-(gradient*3000) ;
-            lossPerMeter = gradient*3000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3000 && sliderValue<=3100){
-            gradient = (threeThousand+threeThousandOneHundred)/(3000+3100) ;
-            intercept = threeThousandOneHundred-(gradient*3100) ;
-            lossPerMeter = gradient*3100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3100 && sliderValue<=3200){
-            gradient = (threeThousandOneHundred+threeThousandTwoHundred)/(3100+3200) ;
-            intercept = threeThousandTwoHundred-(gradient*3200) ;
-            lossPerMeter = gradient*3200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3200 && sliderValue<=3300){
-            gradient = (threeThousandTwoHundred+threeThousandThreeHundred)/(3200+3300) ;
-            intercept = threeThousandThreeHundred-(gradient*3300) ;
-            lossPerMeter = gradient*3300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3300 && sliderValue<=3400){
-            gradient = (threeThousandThreeHundred+threeThousandFourHundred)/(3300+3400) ;
-            intercept = threeThousandFourHundred-(gradient*3400) ;
-            lossPerMeter = gradient*3400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3400 && sliderValue<=3500){
-            gradient = (threeThousandFourHundred+threeThousandFiveHundred)/(3400+3500) ;
-            intercept = threeThousandFiveHundred-(gradient*3500) ;
-            lossPerMeter = gradient*3500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3500 && sliderValue<=3600){
-            gradient = (threeThousandFiveHundred+threeThousandSixHundred)/(3500+3600) ;
-            intercept = threeThousandSixHundred-(gradient*3600) ;
-            lossPerMeter = gradient*3600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3600 && sliderValue<=3700){
-            gradient = (threeThousandSixHundred+threeThousandSevenHundred)/(3600+3700) ;
-            intercept = threeThousandSevenHundred-(gradient*3700) ;
-            lossPerMeter = gradient*3700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3700 && sliderValue<=3800){
-            gradient = (threeThousandSevenHundred+threeThousandEightHundred)/(3700+3800) ;
-            intercept = threeThousandEightHundred-(gradient*3800) ;
-            lossPerMeter = gradient*3800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3800 && sliderValue<=3900){
-            gradient = (threeThousandEightHundred+threeThousandNineHundred)/(3800+3900) ;
-            intercept = threeThousandNineHundred-(gradient*3900) ;
-            lossPerMeter = gradient*3900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>3900 && sliderValue<=4000){
-            gradient = (threeThousandNineHundred+fourThousand)/(3900+4000) ;
-            intercept = fourThousand-(gradient*4000) ;
-            lossPerMeter = gradient*4000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4000 && sliderValue<=4100){
-            gradient = (fourThousand+fourThousandOneHundred)/(4000+4100) ;
-            intercept = fourThousandOneHundred-(gradient*4100) ;
-            lossPerMeter = gradient*4100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4100 && sliderValue<=4200){
-            gradient = (fourThousandOneHundred+fourThousandTwoHundred)/(4100+4200) ;
-            intercept = fourThousandTwoHundred-(gradient*4200) ;
-            lossPerMeter = gradient*4200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4200 && sliderValue<=4300){
-            gradient = (fourThousandTwoHundred+fourThousandThreeHundred)/(4200+4300) ;
-            intercept = fourThousandThreeHundred-(gradient*4300) ;
-            lossPerMeter = gradient*4300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4300 && sliderValue<=4400){
-            gradient = (fourThousandThreeHundred+fourThousandFourHundred)/(4300+4400) ;
-            intercept = fourThousandFourHundred-(gradient*4400) ;
-            lossPerMeter = gradient*4400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4400 && sliderValue<=4500){
-            gradient = (fourThousandFourHundred+fourThousandFiveHundred)/(4400+4500) ;
-            intercept = fourThousandFiveHundred-(gradient*4500) ;
-            lossPerMeter = gradient*4500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4500 && sliderValue<=4600){
-            gradient = (fourThousandFiveHundred+fourThousandSixHundred)/(4500+4600) ;
-            intercept = fourThousandSixHundred-(gradient*4600) ;
-            lossPerMeter = gradient*4600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4600 && sliderValue<=4700){
-            gradient = (fourThousandSixHundred+fourThousandSevenHundred)/(4600+4700) ;
-            intercept = fourThousandSevenHundred-(gradient*4700) ;
-            lossPerMeter = gradient*4700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4700 && sliderValue<=4800){
-            gradient = (fourThousandSevenHundred+fourThousandEightHundred)/(4700+4800) ;
-            intercept = fourThousandEightHundred-(gradient*4800) ;
-            lossPerMeter = gradient*4800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4800 && sliderValue<=4900){
-            gradient = (fourThousandEightHundred+fourThousandNineHundred)/(4800+4900) ;
-            intercept = fourThousandNineHundred-(gradient*4900) ;
-            lossPerMeter = gradient*4900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>4900 && sliderValue<=5000){
-            gradient = (fourThousandNineHundred+fiveThousand)/(4900+5000) ;
-            intercept = fiveThousand-(gradient*5000) ;
-            lossPerMeter = gradient*5000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5000 && sliderValue<=5100){
-            gradient = (fiveThousand+fiveThousandOneHundred)/(5000+5100) ;
-            intercept = fiveThousandOneHundred-(gradient*5100) ;
-            lossPerMeter = gradient*5100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5100 && sliderValue<=5200){
-            gradient = (fiveThousandOneHundred+fiveThousandTwoHundred)/(5100+5200) ;
-            intercept = fiveThousandTwoHundred-(gradient*5200) ;
-            lossPerMeter = gradient*5200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5200 && sliderValue<=5300){
-            gradient = (fiveThousandTwoHundred+fiveThousandThreeHundred)/(5200+5300) ;
-            intercept = fiveThousandThreeHundred-(gradient*5300) ;
-            lossPerMeter = gradient*5300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5300 && sliderValue<=5400){
-            gradient = (fiveThousandThreeHundred+fiveThousandFourHundred)/(5300+5400) ;
-            intercept = fiveThousandFourHundred-(gradient*5400) ;
-            lossPerMeter = gradient*5400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5400 && sliderValue<=5500){
-            gradient = (fiveThousandFourHundred+fiveThousandFiveHundred)/(5400+5500) ;
-            intercept = fiveThousandFiveHundred-(gradient*5500) ;
-            lossPerMeter = gradient*5500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5500 && sliderValue<=5600){
-            gradient = (fiveThousandFiveHundred+fiveThousandSixHundred)/(5500+5600) ;
-            intercept = fiveThousandSixHundred-(gradient*5600) ;
-            lossPerMeter = gradient*5600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5600 && sliderValue<=5700){
-            gradient = (fiveThousandSixHundred+fiveThousandSevenHundred)/(5600+5700) ;
-            intercept = fiveThousandSevenHundred-(gradient*5700) ;
-            lossPerMeter = gradient*5700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5700 && sliderValue<=5800){
-            gradient = (fiveThousandSevenHundred+fiveThousandEightHundred)/(5700+5800) ;
-            intercept = fiveThousandEightHundred-(gradient*5800) ;
-            lossPerMeter = gradient*5800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5800 && sliderValue<=5900){
-            gradient = (fiveThousandEightHundred+fiveThousandNineHundred)/(5800+5900) ;
-            intercept = fiveThousandNineHundred-(gradient*5900) ;
-            lossPerMeter = gradient*5900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>5900 && sliderValue<=6000){
-            gradient = (fiveThousandNineHundred+sixThousand)/(5900+6000) ;
-            intercept = sixThousand-(gradient*6000) ;
-            lossPerMeter = gradient*6000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6000 && sliderValue<=6100){
-            gradient = (sixThousand+sixThousandOneHundred)/(6000+6100) ;
-            intercept = sixThousandOneHundred-(gradient*6100) ;
-            lossPerMeter = gradient*6100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6100 && sliderValue<=6200){
-            gradient = (sixThousandOneHundred+sixThousandTwoHundred)/(6100+6200) ;
-            intercept = sixThousandTwoHundred-(gradient*6200) ;
-            lossPerMeter = gradient*6200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6200 && sliderValue<=6300){
-            gradient = (sixThousandTwoHundred+sixThousandThreeHundred)/(6200+6300) ;
-            intercept = sixThousandThreeHundred-(gradient*6300) ;
-            lossPerMeter = gradient*6300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6300 && sliderValue<=6400){
-            gradient = (sixThousandThreeHundred+sixThousandFourHundred)/(6300+6400) ;
-            intercept = sixThousandFourHundred-(gradient*6400) ;
-            lossPerMeter = gradient*6400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6400 && sliderValue<=6500){
-            gradient = (sixThousandFourHundred+sixThousandFiveHundred)/(6400+6500) ;
-            intercept = sixThousandFiveHundred-(gradient*6500) ;
-            lossPerMeter = gradient*6500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6500 && sliderValue<=6600){
-            gradient = (sixThousandFiveHundred+sixThousandSixHundred)/(6500+6600) ;
-            intercept = sixThousandSixHundred-(gradient*6600) ;
-            lossPerMeter = gradient*6600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6600 && sliderValue<=6700){
-            gradient = (sixThousandSixHundred+sixThousandSevenHundred)/(6600+6700) ;
-            intercept = sixThousandSevenHundred-(gradient*6700) ;
-            lossPerMeter = gradient*6700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6700 && sliderValue<=6800){
-            gradient = (sixThousandSevenHundred+sixThousandEightHundred)/(6700+6800) ;
-            intercept = sixThousandEightHundred-(gradient*6800) ;
-            lossPerMeter = gradient*6800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6800 && sliderValue<=6900){
-            gradient = (sixThousandEightHundred+sixThousandNineHundred)/(6800+6900) ;
-            intercept = sixThousandNineHundred-(gradient*6900) ;
-            lossPerMeter = gradient*6900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>6900 && sliderValue<=7000){
-            gradient = (sixThousandNineHundred+sevenThousand)/(6900+7000) ;
-            intercept = sevenThousand-(gradient*7000) ;
-            lossPerMeter = gradient*7000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7000 && sliderValue<=7100){
-            gradient = (sevenThousand+sevenThousandOneHundred)/(7000+7100) ;
-            intercept = sevenThousandOneHundred-(gradient*7100) ;
-            lossPerMeter = gradient*7100+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7100 && sliderValue<=7200){
-            gradient = (sevenThousandOneHundred+sevenThousandTwoHundred)/(7100+7200) ;
-            intercept = sevenThousandTwoHundred-(gradient*7200) ;
-            lossPerMeter = gradient*7200+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7200 && sliderValue<=7300){
-            gradient = (sevenThousandTwoHundred+sevenThousandThreeHundred)/(7200+7300) ;
-            intercept = sevenThousandThreeHundred-(gradient*7300) ;
-            lossPerMeter = gradient*7300+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7300 && sliderValue<=7400){
-            gradient = (sevenThousandThreeHundred+sevenThousandFourHundred)/(7300+7400) ;
-            intercept = sevenThousandFourHundred-(gradient*7400) ;
-            lossPerMeter = gradient*7400+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7400 && sliderValue<=7500){
-            gradient = (sevenThousandFourHundred+sevenThousandFiveHundred)/(7400+7500) ;
-            intercept = sevenThousandFiveHundred-(gradient*7500) ;
-            lossPerMeter = gradient*7500+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7500 && sliderValue<=7600){
-            gradient = (sevenThousandFiveHundred+sevenThousandSixHundred)/(7500+7600) ;
-            intercept = sevenThousandSixHundred-(gradient*7600) ;
-            lossPerMeter = gradient*7600+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7600 && sliderValue<=7700){
-            gradient = (sevenThousandSixHundred+sevenThousandSevenHundred)/(7600+7700) ;
-            intercept = sevenThousandSevenHundred-(gradient*7700) ;
-            lossPerMeter = gradient*7700+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7700 && sliderValue<=7800){
-            gradient = (sevenThousandSevenHundred+sevenThousandEightHundred)/(7700+7800) ;
-            intercept = sevenThousandEightHundred-(gradient*7800) ;
-            lossPerMeter = gradient*7800+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7800 && sliderValue<=7900){
-            gradient = (sevenThousandEightHundred+sevenThousandNineHundred)/(7800+7900) ;
-            intercept = sevenThousandNineHundred-(gradient*7900) ;
-            lossPerMeter = gradient*7900+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }if (sliderValue>7900 && sliderValue<=8000){
-            gradient = (sevenThousandNineHundred+eightThousand)/(7900+8000) ;
-            intercept = eightThousand-(gradient*8000) ;
-            lossPerMeter = gradient*8000+intercept ;
-            totalLoss = distanceGiven*lossPerMeter ;
-        }
-        }
-        }
-        catch(Exception e){
-            
-        }
-        
-        
-    }
     private void cableSelectedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cableSelectedTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cableSelectedTxtActionPerformed
@@ -1328,6 +644,10 @@ public class coaxCalc extends javax.swing.JFrame {
         // TODO add your handling code here:
         //distanceGiven = inputLengthTxt.getText();
     }//GEN-LAST:event_inputLengthTxtActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1384,6 +704,7 @@ public class coaxCalc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jackTolerTxt;
     private javax.swing.JLabel jacketToleranceLbl;
     private javax.swing.JLabel lengthInputLbl;
