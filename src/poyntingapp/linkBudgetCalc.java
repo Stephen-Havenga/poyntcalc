@@ -35,7 +35,6 @@ public class linkBudgetCalc extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         mfButtonGroup = new javax.swing.ButtonGroup();
         linkBudgetPanel = new javax.swing.JPanel();
-        freeSpaceLossLbl = new javax.swing.JLabel();
         distanceInputLbl = new javax.swing.JLabel();
         unitsSelectLbl = new javax.swing.JLabel();
         mButton = new javax.swing.JRadioButton();
@@ -46,6 +45,27 @@ public class linkBudgetCalc extends javax.swing.JFrame {
         MHzLbl = new javax.swing.JLabel();
         freeSpaceLossResultLbl = new javax.swing.JLabel();
         freeSpaceLossResultTxt = new javax.swing.JTextField();
+        jKm = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        PowerTX = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextTxPowerW = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextTxPowerdB = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextTxGain = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextRxGain = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextTxLoss = new javax.swing.JTextField();
+        jTextRxLoss = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        BCalculate = new javax.swing.JButton();
+        jTextRxPower = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -63,8 +83,7 @@ public class linkBudgetCalc extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Link Budget Calculator");
 
-        freeSpaceLossLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        freeSpaceLossLbl.setText("Free Space Loss Calculation:");
+        linkBudgetPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Free Space Loss Calculator"));
 
         distanceInputLbl.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         distanceInputLbl.setText("Please input distance:");
@@ -105,6 +124,10 @@ public class linkBudgetCalc extends javax.swing.JFrame {
 
         freeSpaceLossResultTxt.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
 
+        jKm.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jKm.setText("m");
+        jKm.setToolTipText("");
+
         javax.swing.GroupLayout linkBudgetPanelLayout = new javax.swing.GroupLayout(linkBudgetPanel);
         linkBudgetPanel.setLayout(linkBudgetPanelLayout);
         linkBudgetPanelLayout.setHorizontalGroup(
@@ -112,35 +135,35 @@ public class linkBudgetCalc extends javax.swing.JFrame {
             .addGroup(linkBudgetPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(freeSpaceLossLbl)
                     .addGroup(linkBudgetPanelLayout.createSequentialGroup()
-                        .addComponent(unitsSelectLbl)
+                        .addComponent(freeSpaceLossResultLbl)
                         .addGap(18, 18, 18)
-                        .addComponent(mButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(fButton))
-                    .addGroup(linkBudgetPanelLayout.createSequentialGroup()
-                        .addComponent(freqSelectLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(freqInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MHzLbl))
+                        .addComponent(freeSpaceLossResultTxt))
                     .addGroup(linkBudgetPanelLayout.createSequentialGroup()
                         .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(freeSpaceLossResultLbl)
-                            .addComponent(distanceInputLbl))
+                            .addComponent(distanceInputLbl)
+                            .addComponent(unitsSelectLbl)
+                            .addComponent(freqSelectLbl))
                         .addGap(18, 18, 18)
                         .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(freeSpaceLossResultTxt))))
-                .addContainerGap(206, Short.MAX_VALUE))
+                            .addGroup(linkBudgetPanelLayout.createSequentialGroup()
+                                .addComponent(mButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(fButton))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, linkBudgetPanelLayout.createSequentialGroup()
+                                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(distanceInputTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                                    .addComponent(freqInputTxt))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(MHzLbl)
+                                    .addComponent(jKm))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         linkBudgetPanelLayout.setVerticalGroup(
             linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(linkBudgetPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(freeSpaceLossLbl)
-                .addGap(18, 18, 18)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(freqSelectLbl)
                     .addComponent(freqInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,17 +171,132 @@ public class linkBudgetCalc extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(distanceInputLbl)
-                    .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(distanceInputTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jKm))
+                .addGap(21, 21, 21)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(unitsSelectLbl)
                     .addComponent(mButton)
                     .addComponent(fButton))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(linkBudgetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(freeSpaceLossResultLbl)
                     .addComponent(freeSpaceLossResultTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Power Link Budget"));
+
+        PowerTX.setText("Power (Tx)");
+
+        jLabel3.setText("Gain (Tx)");
+
+        jLabel4.setText("Gain (Rx)");
+
+        jLabel5.setText("Loss (Tx)");
+
+        jLabel6.setText("Loss (Rx)");
+
+        jLabel2.setText("Watt");
+
+        jTextTxPowerdB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextTxPowerdBActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("dBm");
+
+        jLabel8.setText("dBi");
+
+        jLabel9.setText("dBi");
+
+        jLabel10.setText("dB");
+
+        jLabel11.setText("dB");
+
+        BCalculate.setText("Calculate");
+        BCalculate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BCalculateActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PowerTX)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextTxPowerW)
+                    .addComponent(jTextTxGain)
+                    .addComponent(jTextRxGain)
+                    .addComponent(jTextTxLoss)
+                    .addComponent(jTextRxLoss, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel9)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel10))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextRxPower, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jTextTxPowerdB, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel7))
+                            .addComponent(BCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(163, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PowerTX)
+                    .addComponent(jTextTxPowerW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextTxPowerdB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jTextTxGain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jTextRxGain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jTextTxLoss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10)
+                            .addComponent(jTextRxPower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextRxLoss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(BCalculate)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,15 +305,19 @@ public class linkBudgetCalc extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(linkBudgetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(linkBudgetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(linkBudgetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(linkBudgetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -198,6 +340,26 @@ public class linkBudgetCalc extends javax.swing.JFrame {
         String sLFS = String.valueOf(LFS);
         freeSpaceLossResultTxt.setText(sLFS);
     }//GEN-LAST:event_fButtonActionPerformed
+
+    private void BCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCalculateActionPerformed
+        float TxPower,RxPower, TxLoss, RxLoss, FSL,TxGain,RxGain, LFS;
+        //Initializing variables
+        TxPower = Float.parseFloat(jTextTxPowerW.getText()) ;
+        RxPower = Float.parseFloat(jTextTxPowerdB.getText());
+        TxGain = Float.parseFloat(jTextTxGain.getText());
+        RxGain= Float.parseFloat(jTextRxGain.getText());
+        TxLoss= Float.parseFloat(jTextTxLoss.getText());
+        RxLoss = Float.parseFloat(jTextRxLoss.getText());
+        //Need to make LFS global
+        LFS = Float.parseFloat(freeSpaceLossResultTxt.getText());
+        RxPower = TxPower + TxGain + RxGain - Math.abs(TxLoss) - Math.abs(RxLoss) - Math.abs(LFS) ;
+        
+        jTextRxPower.setText(Float.toString(RxPower));
+    }//GEN-LAST:event_BCalculateActionPerformed
+
+    private void jTextTxPowerdBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTxPowerdBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextTxPowerdBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,17 +397,37 @@ public class linkBudgetCalc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BCalculate;
     private javax.swing.JLabel MHzLbl;
+    private javax.swing.JLabel PowerTX;
     private javax.swing.JLabel distanceInputLbl;
     private javax.swing.JTextField distanceInputTxt;
     private javax.swing.JRadioButton fButton;
-    private javax.swing.JLabel freeSpaceLossLbl;
     private javax.swing.JLabel freeSpaceLossResultLbl;
     private javax.swing.JTextField freeSpaceLossResultTxt;
     private javax.swing.JTextField freqInputTxt;
     private javax.swing.JLabel freqSelectLbl;
+    private javax.swing.JLabel jKm;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextRxGain;
+    private javax.swing.JTextField jTextRxLoss;
+    private javax.swing.JTextField jTextRxPower;
+    private javax.swing.JTextField jTextTxGain;
+    private javax.swing.JTextField jTextTxLoss;
+    private javax.swing.JTextField jTextTxPowerW;
+    private javax.swing.JTextField jTextTxPowerdB;
     private javax.swing.JPanel linkBudgetPanel;
     private javax.swing.JRadioButton mButton;
     private javax.swing.ButtonGroup mfButtonGroup;
